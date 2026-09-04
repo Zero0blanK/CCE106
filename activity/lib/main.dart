@@ -4,6 +4,8 @@ import 'package:activity/activity2/columnAlignment.dart';
 import 'package:activity/activity2/rowAlignment.dart';
 import 'package:activity/activity2/padding.dart';
 import 'package:activity/activity3/login.dart';
+import 'package:activity/activity4/calculator.dart';
+import 'package:activity/activity5/auth/login.dart' as activity5;
 
 void main() {
   runApp(const MyApp());
@@ -74,6 +76,18 @@ class HomeScreen extends StatelessWidget {
       icon: Icons.login_outlined,
       builder: _buildLogin,
     ),
+    ActivityItem(
+      title: 'Calculator',
+      subtitle: 'Activity 4 • Basic calculator',
+      icon: Icons.calculate_outlined,
+      builder: _buildCalculator,
+    ),
+    ActivityItem(
+      title: 'Social Media Clone',
+      subtitle: 'Activity 5 • Login + feed UI',
+      icon: Icons.people_outline,
+      builder: _buildSocialMedia,
+    ),
   ];
 
   static Widget _buildPavlova(BuildContext context) => Pavlova();
@@ -81,6 +95,9 @@ class HomeScreen extends StatelessWidget {
   static Widget _buildRowAlignment(BuildContext context) => RowAlignment();
   static Widget _buildPadding(BuildContext context) => PaddingSample();
   static Widget _buildLogin(BuildContext context) => LoginPage();
+  static Widget _buildCalculator(BuildContext context) => const Calculator();
+  static Widget _buildSocialMedia(BuildContext context) =>
+      const activity5.LoginForm();
 
   @override
   Widget build(BuildContext context) {
